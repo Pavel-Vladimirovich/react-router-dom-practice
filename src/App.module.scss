@@ -1,0 +1,30 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    background-color: rgb(69, 69, 69);
+    display: flex;
+
+    justify-content: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    li a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul li a.active {
+        color: rgb(50, 146, 214);
+    }
+}
