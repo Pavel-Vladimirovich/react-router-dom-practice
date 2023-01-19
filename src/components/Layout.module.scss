@@ -2,24 +2,32 @@
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    border: 1px solid red;
+   
+}
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 10px;
+
 }
 
-header {
+.header{
+    
+}
+.topHeader {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    min-height: 40px;
-    background-color: rgb(69, 69, 69);
-    display: flex;
-
-    justify-content: center;
-
+    min-width: 100%;
+    background-color: rgb(47, 47, 47);
+   
     ul {
         list-style: none;
+        width: 100%;
         display: flex;
-        gap: 40px;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 0px;
     }
 
     li a {
@@ -36,15 +44,12 @@ header {
     }
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1240px;
-    padding: 10px;
+
+.main {   
+    margin-top: 90px;
 }
 
-
-.header {}
-
-.main {}
-
-.footer {}
+.footer {   
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
