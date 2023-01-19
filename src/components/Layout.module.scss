@@ -1,0 +1,50 @@
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border: 1px solid red;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    background-color: rgb(69, 69, 69);
+    display: flex;
+
+    justify-content: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    li a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul li a.active {
+        color: rgb(50, 146, 214);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 10px;
+}
+
+
+.header {}
+
+.main {}
+
+.footer {}
