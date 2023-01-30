@@ -6,12 +6,8 @@ import { Technology } from "./Technology"
 
 export const Blogpage = () => {
 
-    const styleBlogpage = {
-       
-    }
-
     return (
-        <div style={styleBlogpage}>
+        <div>
             <h2>Blog page</h2>
             <ul>
                 <li><Link to={'nature'}>Nature</Link></li>
