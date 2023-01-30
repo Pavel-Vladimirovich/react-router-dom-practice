@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
-
+type PostsPropsType = {
+    id: string,
+    name: string,
+    username: string,
+    email: string,
+    address: {
+        city: string,
+        street: string,
+        zipcode: string
+    }
+}
 
 export const Aboutpage = () => {
 
@@ -11,26 +21,14 @@ export const Aboutpage = () => {
     }
 
 
-    const [posts, setPosts] = useState([
-        {
-            id: '',
-            name: '',
-            username: '',
-            email: '',
-            address: {
-                city: '',
-                street: '',
-                zipcode: ''
-            }
-        }
-    ])
+    const [posts, setPosts] = useState<PostsPropsType>()
 
     console.log(posts)
     const [resources, setResources] = useState<string>('')
 
     useEffect(() => {
         console.log('render')
-        fetch(`https://jsonplaceholder.typicode.com/${resources}/1`)
+        fetch(`https://jsonplaceholder.typicode.com/${resources}/`)
             .then(response => response.json())
             .then(json => setPosts(json))
     }, [resources])
@@ -45,9 +43,9 @@ export const Aboutpage = () => {
                 <button onClick={() => { setResources('users') }}>users</button>
             </div>
             <p>{
-                posts.map(item =>
-                    <p>{item.name}</p>
-                )
+                // posts.map(post =>
+                //     <p>{post.name}</p>)
+
             }</p>
             <h2>About page</h2>
             <span>Call us </span>
