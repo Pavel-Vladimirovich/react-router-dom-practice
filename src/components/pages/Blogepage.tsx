@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Link, Outlet, Route, Routes } from "react-router-dom"
 import { Family } from "./Family"
 import { Healthy } from "./Healthy"
@@ -5,6 +6,10 @@ import { Nature } from "./Nature"
 import { Technology } from "./Technology"
 
 export const Blogpage = () => {
+
+    useEffect(() => {
+        document.title = 'Blog Page'        
+    }, [])
 
     return (
         <div>

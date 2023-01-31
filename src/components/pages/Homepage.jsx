@@ -1,4 +1,5 @@
 import { NavLink, Route, Routes } from "react-router-dom"
+import { useEffect } from "react"
 
 const Information = () => {
     return (
@@ -12,8 +13,13 @@ const Information = () => {
 
 
 export const Homepage = () => {
+
+    useEffect(() => {
+        document.title = 'Home Page'
+    }, [])
+
     const styleHomepage = {
-       
+
     }
 
     return (

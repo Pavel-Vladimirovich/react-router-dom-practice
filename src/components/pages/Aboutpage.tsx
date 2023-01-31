@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
-type PostsPropsType = {
+type PostsType = {
     id: string,
     name: string,
     username: string,
@@ -21,19 +21,20 @@ export const Aboutpage = () => {
     }
 
 
-    const [posts, setPosts] = useState<PostsPropsType>()
+    const [posts, setPosts] = useState<any>()
 
     console.log(posts)
     const [resources, setResources] = useState<string>('')
 
     useEffect(() => {
+        document.title = !resources ? 'About Us Page' : resources
         console.log('render')
-        fetch(`https://jsonplaceholder.typicode.com/${resources}/`)
+        fetch(`https://jsonplaceholder.typicode.com/${resources}/1`)
             .then(response => response.json())
             .then(json => setPosts(json))
     }, [resources])
 
-
+    
 
     return (
         <div>
@@ -43,9 +44,7 @@ export const Aboutpage = () => {
                 <button onClick={() => { setResources('users') }}>users</button>
             </div>
             <p>{
-                // posts.map(post =>
-                //     <p>{post.name}</p>)
-
+              
             }</p>
             <h2>About page</h2>
             <span>Call us </span>
