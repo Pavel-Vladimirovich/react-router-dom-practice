@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Link, Outlet, Route, Routes } from "react-router-dom"
+import {Link, NavLink, Outlet, Route, Routes} from "react-router-dom"
 import { Family } from "./Family"
 import { Healthy } from "./Healthy"
 import { Nature } from "./Nature"
@@ -27,6 +27,7 @@ export const Blogpage = () => {
                 <Route path='family' element={<Family />} />
             </Routes>
             {/* <Outlet /> */}
+            <NavLink to={'/'}>Home page</NavLink>
         </div>
     )
 }

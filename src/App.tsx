@@ -1,9 +1,8 @@
 
 import { Route, Routes } from 'react-router-dom';
-import s from './App.module.scss';
 import { Homepage } from './components/pages/Homepage'
 import { Blogpage } from './components/pages/Blogepage';
-import { Aboutpage } from './components/pages/Aboutpage'
+import { AboutPage } from './components/pages/AboutPage'
 import { Layout } from './components/Layout';
 import { SinglePage } from './components/pages/Singlpage';
 
@@ -14,7 +13,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="blogpage/*" element={<Blogpage />} />
-          <Route path="aboutpage" element={<Aboutpage />} />
+          <Route path="aboutpage" element={<AboutPage />} />
           <Route path="aboutpage/:id" element={<SinglePage />} />
         </Route>
       </Routes>
